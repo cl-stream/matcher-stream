@@ -1,7 +1,7 @@
 ;;
-;;  token-stream  -  Lexer classes for cl-stream
+;;  matcher-stream  -  Character matcher classes for cl-stream
 ;;
-;;  Copyright 2017,2018 Thomas de Grivel <thoxdg@gmail.com>
+;;  Copyright 2018 Thomas de Grivel <thoxdg@gmail.com>
 ;;
 ;;  Permission to use, copy, modify, and distribute this software for any
 ;;  purpose with or without fee is hereby granted, provided that the above
@@ -18,17 +18,17 @@
 
 (in-package :common-lisp-user)
 
-(defpackage :token-stream.system
+(defpackage :matcher-stream.system
   (:use :common-lisp :asdf))
 
-(in-package :token-stream.system)
+(in-package :matcher-stream.system)
 
-(defsystem :token-stream
-  :name "token-stream"
+(defsystem :matcher-stream
+  :name "matcher-stream"
   :author "Thomas de Grivel <thoxdg@gmail.com>"
   :version "0.1"
-  :description "Lexer classes for cl-stream"
+  :description "Matcher classes for cl-stream"
   :depends-on ("cl-stream")
   :components
   ((:file "package")
-   (:file "token-stream" :depends-on ("package"))))
+   (:file "matcher-stream" :depends-on ("package"))))

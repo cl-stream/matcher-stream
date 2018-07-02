@@ -1,7 +1,7 @@
 ;;
-;;  token-stream  -  Lexer classes for cl-stream
+;;  matcher-stream  -  Character matcher classes for cl-stream
 ;;
-;;  Copyright 2017,2018 Thomas de Grivel <thoxdg@gmail.com>
+;;  Copyright 2018 Thomas de Grivel <thoxdg@gmail.com>
 ;;
 ;;  Permission to use, copy, modify, and distribute this software for any
 ;;  purpose with or without fee is hereby granted, provided that the above
@@ -18,35 +18,26 @@
 
 (in-package :common-lisp)
 
-(defpackage :token-stream
+(defpackage :matcher-stream
   (:use :cl-stream
         :common-lisp)
   #.(cl-stream:shadowing-import-from)
   (:export
-   #:*buffer-size*
-   #:discard-token
-   #:lexer
-   #:lexer-buffer
-   #:lexer-character
-   #:lexer-eof-p
-   #:lexer-input
-   #:lexer-input-ended
-   #:lexer-input-n
-   #:lexer-line
-   #:lexer-match-char
-   #:lexer-match-start
-   #:lexer-token
-   #:make-token
    #:match
    #:match-not
    #:match-option
    #:match-sequence
    #:match-times
    #:match-until
-   #:pop-token
-   #:push-token
-   #:token
-   #:token-character
-   #:token-line
-   #:token-stream
-   #:token-string))
+   #:matcher
+   #:matcher-buffer
+   #:matcher-char
+   #:matcher-eof-p
+   #:matcher-input
+   #:matcher-input-column
+   #:matcher-input-ended
+   #:matcher-input-line
+   #:matcher-input-n
+   #:matcher-start
+   #:matcher-stream
+   ))
